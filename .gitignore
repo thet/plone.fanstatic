@@ -1,6 +1,8 @@
 *.py?
 
+.installed.cfg
 /bin/
 /develop-eggs/
 /parts/
-
+/src/plone.fanstatic.egg-info/
+/var/
