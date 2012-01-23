@@ -1,0 +1,6 @@
+*.py?
+
+/bin/
+/develop-eggs/
+/parts/
+

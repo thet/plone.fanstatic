@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope">
+
+    <include package="plone.resource" file="meta.zcml" />
+
+    <include package="plone.resource" />
+    <include package="five.globalrequest" />
+    <include package="plone.transformchain" />
+
+
+   <!-- Transform order 8050 - apply fanstatic resources -->
+   <adapter
+       name="plone.fanstatic.transform"
+       factory=".transform.FanstaticTransform"
+       />
+
+   <!-- TODO: this should be implemented elsewhere but for now i'll keep it
+        here -->
+
+</configure>
