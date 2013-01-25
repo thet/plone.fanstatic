@@ -55,8 +55,9 @@ class FanstaticTransform(object):
                 publisher_signature='/++fanstatic++/',
                 )
 
-        from plone.fanstatic import plone
-        plone.need()
+        from plone.fanstatic import groups
+        for group in groups:
+            group.need()
 
         resources = etree.HTML(resources.render()).find('head').getchildren()
         head = resources and result.tree.getroot().find('head') or None

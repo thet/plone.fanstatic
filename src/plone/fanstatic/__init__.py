@@ -84,3 +84,5 @@ plone = Group([
         form_tabbing,
         popupforms,
         ])
+
+groups = [plone,] # import and extend in addons
