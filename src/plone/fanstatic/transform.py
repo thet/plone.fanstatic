@@ -59,9 +59,10 @@ class FanstaticTransform(object):
         plone.need()
 
         resources = etree.HTML(resources.render()).find('head').getchildren()
-
-        head = result.tree.getroot().find('head')
-        for item in resources:
-            head.append(item)
+        head = resources and result.tree.getroot().find('head') or None
+        # Ajax are without head...
+        if head:
+            for item in resources:
+                head.append(item)
 
         return result
